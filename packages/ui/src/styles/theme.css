@@ -4,10 +4,10 @@
   --font-family-mono: "IBM Plex Mono", "IBM Plex Mono Fallback";
   --font-family-mono--font-feature-settings: "ss01" 1;
 
-  --font-size-small: 13px;
-  --font-size-base: 14px;
-  --font-size-large: 16px;
-  --font-size-x-large: 20px;
+  --font-size-small: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --font-size-base: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-large: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-x-large: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --line-height-large: 150%;

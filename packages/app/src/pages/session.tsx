@@ -592,12 +592,13 @@ export default function Page() {
   )
 
   const NewSessionView = () => (
-    <div class="size-full flex flex-col pb-45 justify-end items-start gap-4 flex-[1_0_0] self-stretch max-w-200 mx-auto px-6">
+    <div class="size-full flex flex-col pb-45 justify-end items-start gap-4 flex-[1_0_0] self-stretch max-w-200 mx-auto px-6 overflow-hidden">
       <div class="text-20-medium text-text-weaker">New session</div>
-      <div class="flex justify-center items-center gap-3">
-        <Icon name="folder" size="small" />
-        <div class="text-12-medium text-text-weak">
-          {getDirectory(sync.data.path.directory)}
+      <div class="flex items-center gap-3 max-w-full overflow-hidden">
+        <Icon name="folder" size="small" class="shrink-0" />
+        <div class="text-12-medium text-text-weak truncate">
+          <span class="hidden sm:inline">{getDirectory(sync.data.path.directory)}</span>
+          <span class="sm:hidden">~/</span>
           <span class="text-text-strong">{getFilename(sync.data.path.directory)}</span>
         </div>
       </div>

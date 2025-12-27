@@ -28,6 +28,7 @@ import { DiffChanges } from "@opencode-ai/ui/diff-changes"
 import { Spinner } from "@opencode-ai/ui/spinner"
 import { getFilename } from "@opencode-ai/util/path"
 import { DropdownMenu } from "@opencode-ai/ui/dropdown-menu"
+import { Mark } from "@opencode-ai/ui/logo"
 import { Session } from "@opencode-ai/sdk/v2/client"
 import { usePlatform } from "@/context/platform"
 import { createStore, produce } from "solid-js/store"
@@ -679,6 +680,14 @@ export default function Layout(props: ParentProps) {
     return (
       <>
         <div class="flex flex-col items-start self-stretch gap-4 p-2 min-h-0 overflow-hidden">
+          <Show when={sidebarProps.mobile}>
+            <A href="/" class="shrink-0 w-full" onClick={mobileSidebar.hide}>
+              <Button variant="ghost" size="large" class="w-full text-left justify-start rounded-lg px-2">
+                <Mark class="shrink-0" />
+                <span class="text-14-medium text-text-strong">OpenCode</span>
+              </Button>
+            </A>
+          </Show>
           <Show when={!sidebarProps.mobile}>
             <Tooltip
               class="shrink-0"

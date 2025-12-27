@@ -36,8 +36,8 @@ export default function Home() {
   }
 
   return (
-    <div class="mx-auto mt-55">
-      <Logo class="w-xl opacity-12" />
+    <div class="mx-auto mt-55 px-4">
+      <Logo class="w-full max-w-[calc(100vw-2rem)] lg:max-w-xl opacity-12" />
       <Switch>
         <Match when={sync.data.project.length > 0}>
           <div class="mt-20 w-full flex flex-col gap-4">
